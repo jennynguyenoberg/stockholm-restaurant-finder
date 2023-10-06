@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.title {
+  font-size: 9em;
+  letter-spacing: -0.8rem;
+  height: 36vh;
+  padding-top: 16px;
+  animation: left-to-right 25s infinite linear;
+  color: var(--orange-red);
+}
+
+@keyframes left-to-right {
+  from {
+    transform: translateX(-0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

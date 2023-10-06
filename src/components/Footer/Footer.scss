@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--orange-red);
+  color: var(--off-white);
+  padding: 1em 2em;
+  font-size: .85em;
+  margin-top: 5em;
+}
+
+.footer-left {
+  flex: 1;
+  text-align: left;
+}
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-logo {
+  flex: 0;
+  margin-top: 5px;
+}
+
+a {
+  color: var(--off-white);
+  text-decoration: underline;
+}
