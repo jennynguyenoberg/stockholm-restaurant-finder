@@ -9,31 +9,35 @@
   padding-left: 1em;
   padding-right: 1em;
   z-index: 999;
-}
 
-.left-items ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  margin-right: auto;
-}
+  .left-items {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      margin-right: auto;
+    }
 
-.left-items li {
-  margin: 0 10px;
-  cursor: pointer;
-}
+    li {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  }
 
-.right-items ul {
-  list-style-type: none;
-  padding: 0;
-}
+  .right-items {
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
 
-.right-items li {
-  margin: 0 10px;
-  cursor: pointer;
-}
+    li {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  }
 
-.link {
-  color: var(--orange-red);
-  text-decoration: none;
+  .link {
+    color: var(--orange-red);
+    text-decoration: none;
+  }
 }
