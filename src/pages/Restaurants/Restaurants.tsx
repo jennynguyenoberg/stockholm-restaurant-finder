@@ -26,7 +26,7 @@ const RestaurantList: React.FC = () => {
         <div className="restaurant-container">
           {data ? (
             <div className="restaurant-row">
-              {data.slice(4).map((restaurant) => (
+              {data.slice(4).map((restaurant, index) => (
                 <div key={restaurant.location_id} className="restaurant-item">
                   {restaurant.photo && restaurant.photo.images.large.url && (
                     <div className="overlay-effect">
@@ -44,14 +44,19 @@ const RestaurantList: React.FC = () => {
                   {/* Displaying cuisine names */}
                   {restaurant.cuisine && (
                     <p className='cuisine'>
-                    {restaurant.cuisine &&
-                      restaurant.cuisine.slice(0, 2).map((cuisine, index) => (
-                        <span key={cuisine.key} className={`cuisine-item-${index}`}>
-                          {cuisine.name}
-                        </span>
-                      ))}
-                  </p>
-                  
+                      {index === 3 ? (
+                        <>
+                          <span className={`cuisine-item-0`}>{restaurant.cuisine[2].name}</span>
+                          <span className={`cuisine-item-2`}>{restaurant.cuisine[0].name}</span>
+                        </>
+                      ) : (
+                        restaurant.cuisine.slice(0, 2).map((cuisine, index) => (
+                          <span key={cuisine.key} className={`cuisine-item-${index}`}>
+                            {cuisine.name}
+                          </span>
+                        ))
+                      )}
+                    </p>
                   )}
                   <p className='link'>
                     <a
@@ -68,7 +73,7 @@ const RestaurantList: React.FC = () => {
             </div>
           ) : (
             <div>Error loading data.</div>
-            )}
+          )}
         </div>
       )}
     </div>
