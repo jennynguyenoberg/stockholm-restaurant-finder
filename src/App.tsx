@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from './components/Navbar/Navbar';
+import Navbar from "./components/Navbar/Navbar";
 import Restaurants from "./pages/Restaurants/Restaurants";
 import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
@@ -15,6 +15,6 @@ const App: React.FC = () => {
       <Footer />
     </>
   );
-}
+};
 
 export default App;

@@ -1,6 +1,6 @@
-import Hero from '../../components/Hero/Hero'
-import RestaurantList from '../../components/RestaurantList/RestaurantList';
-import TitleScroll from '../../components/TitleScroll/TitleScroll';
+import Hero from "../../components/Hero/Hero";
+import RestaurantList from "../../components/RestaurantList/RestaurantList";
+import TitleScroll from "../../components/TitleScroll/TitleScroll";
 
 const Home: React.FC = () => {
   return (
@@ -10,6 +10,6 @@ const Home: React.FC = () => {
       <TitleScroll />
     </>
   );
-}
+};
 
 export default Home;

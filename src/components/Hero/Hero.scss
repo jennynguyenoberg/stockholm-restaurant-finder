@@ -2,7 +2,7 @@
   position: relative;
 
   .background-image {
-    background-image: url('../../assets/images/background-image.jpg');
+    background-image: url("../../assets/images/background-image.jpg");
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -27,7 +27,7 @@
 
     .photo-tag {
       display: flex;
-      font-size: .8em;
+      font-size: 0.8em;
       flex-direction: column;
       justify-content: flex-end;
       align-items: flex-end;

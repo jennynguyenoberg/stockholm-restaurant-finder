@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
-import useSWR from 'swr';
-import { fetchData } from '../../api/fetchApi';
-import { Restaurant } from '../../types/types';
-import './RestaurantList.scss';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import useSWR from "swr";
+import { fetchData } from "../../api/fetchApi";
+import { Restaurant } from "../../types/types";
+import "./RestaurantList.scss";
+import { Link } from "react-router-dom";
 
 const RestaurantList: React.FC = () => {
   const [loading, setLoading] = useState(true);
-  const { data, error } = useSWR<Restaurant[]>('restaurantData', fetchData);
+  const { data, error } = useSWR<Restaurant[]>("restaurantData", fetchData);
 
   useEffect(() => {
     if (data || error) {
@@ -16,14 +16,14 @@ const RestaurantList: React.FC = () => {
   }, [data, error]);
 
   if (error) {
-    return <div className='error'>Error loading data.</div>;
+    return <div className="error">Error loading data.</div>;
   }
 
   return (
     <div className="App">
-      <h1 className='header'>Popular Restaurants</h1>
+      <h1 className="header">Popular Restaurants</h1>
       {loading ? (
-        <div className='loading'>Loading...</div>
+        <div className="loading">Loading...</div>
       ) : (
         <div className="restaurant-container">
           {data ? (
@@ -39,28 +39,30 @@ const RestaurantList: React.FC = () => {
                       />
                     </div>
                   )}
-                  <p className='name'>{restaurant.name}</p>
+                  <p className="name">{restaurant.name}</p>
                   <p>Rating: {restaurant.rating}</p>
                   <p>{restaurant.address_obj.street1}</p>
                   <p>Phone: {restaurant.phone}</p>
                   {/* Displaying cuisine names */}
                   {restaurant.cuisine && (
-                    <p className='cuisine'>
-                    {restaurant.cuisine &&
-                      restaurant.cuisine.slice(0, 2).map((cuisine, index) => (
-                        <span key={cuisine.key} className={`cuisine-item-${index}`}>
-                          {cuisine.name}
-                        </span>
-                      ))}
-                  </p>
-                  
+                    <p className="cuisine">
+                      {restaurant.cuisine &&
+                        restaurant.cuisine.slice(0, 2).map((cuisine, index) => (
+                          <span
+                            key={cuisine.key}
+                            className={`cuisine-item-${index}`}
+                          >
+                            {cuisine.name}
+                          </span>
+                        ))}
+                    </p>
                   )}
-                  <p className='link'>
+                  <p className="link">
                     <a
                       href={restaurant.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className='link'
+                      className="link"
                     >
                       More info
                     </a>
@@ -70,16 +72,16 @@ const RestaurantList: React.FC = () => {
             </div>
           ) : (
             <div>Error loading data.</div>
-            )}
-            <div className='button-container'>
-          <Link to="/restaurants">
-            <button className="link-button">More +</button>
-          </Link>
+          )}
+          <div className="button-container">
+            <Link to="/restaurants">
+              <button className="link-button">More +</button>
+            </Link>
           </div>
         </div>
       )}
     </div>
   );
-}
+};
 
 export default RestaurantList;

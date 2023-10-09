@@ -10,7 +10,7 @@ $off-white: var(--off-white);
   padding: 1em 2em;
   font-size: 0.85em;
 
-  .footer-left, 
+  .footer-left,
   .footer-right {
     margin: 1em;
     text-align: center;
@@ -29,16 +29,16 @@ $off-white: var(--off-white);
     color: $off-white;
     text-decoration: underline;
   }
-  
+
   @media screen and (min-width: 768px) {
-    flex-direction: row; 
+    flex-direction: row;
 
     .footer-logo {
       flex: 0;
       margin-top: 0.5em;
     }
 
-    .footer-left, 
+    .footer-left,
     .footer-right {
       flex: 1;
       text-align: left;
