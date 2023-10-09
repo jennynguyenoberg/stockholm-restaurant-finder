@@ -1,27 +1,53 @@
-# React + TypeScript + Vite
+# Stockholm Restaurant Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A TypeScript project using Sass and React Hooks.
 
-Currently, two official plugins are available:
+<div align="center">
+  <img 
+    alt="Image of website" 
+    src="https://github.com/jennynguyenoberg/stockholm-restaurant-finder/assets/116844306/88f8c4bc-17bc-42f0-b966-f7cb6707aaea" width="100%" />
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
+This project is a web application built with TypeScript, Sass, and React Hooks (`useSWR`, `useState`, and `useEffect`) to fetch data from the [Worldwide Restaurants API](https://rapidapi.com/ptwebsolution/api/worldwide-restaurants).
 
-## Expanding the ESLint configuration
+## Table of Contents
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Color Palette](#color-palette)
+- [To-Do List](#to-do-list)
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- TypeScript for type safety
+- Sass for easy and maintainable styling
+- `useState` and `useEffect` hooks for state management and side effects
+- `useSWR` for efficient data fetching and caching
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Getting Started
+
+To get started with this project, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone git@github.com:jennynguyenoberg/stockholm-restaurant-finder.git
+2. Navigate to the project directory:
+
+   ```bash
+   cd your-project
+3. Install dependencies:
+
+   ```bash
+   npm install
+4. Start the development server:
+
+   ```bash
+   npm run dev
+## Color Palette
+
+| Color          | Hex                                                                |
+| -------------- | ------------------------------------------------------------------ |
+| Orange Red     | ![#F74C25](https://via.placeholder.com/10/F74C25?text=+) `#F74C25` |
+| Off-white      | ![#F7F6F2](https://via.placeholder.com/10/F7F6F2?text=+) `#F7F6F2` |
